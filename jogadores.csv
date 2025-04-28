@@ -1,0 +1,31 @@
+ID;Player;Nacionalidade;Team;P;Season;League;GoalPG;AssistPG;PDG;SPG;KEYP;Drb_C;Fouled;Off;Disp;UnsTch;Tackles;inter;Fouls;Offsides;cortes;Drb_S;Blocks;Age
+192985;Kevin De Bruyne;Belgium;Man City;99,91;2020-21;Premier League;0,29985007;0,59970015;0,89955023;3,2;4,5;4,5;2,8;0,2;2,5;1,6;0,5;0,2;0,6;0;0;0,3;0;Modern Age
+239085;Erling Haaland;Norway;Man City;99,47;2022-23;Premier League;1,29543;0,28787334;1,58330335;3,5;0,9;2,2;1,8;0,6;1,8;2,8;0,7;0,5;1,3;0;0,8;0,8;0,1;Modern Age
+158023;Lionel Messi;Argentina;Barcelona;99,9;2019-20;Laliga;0,86775425;0,72891357;1,59666782;5,5;2,5;1,1;0,7;0,7;1,1;1,7;0,2;0,2;0,5;0;0,7;0,3;0,1;Modern Age
+158023;Lionel Messi;Argentina;Barcelona;99,87;2018-19;Laliga;1,32841328;0,4797048;1,80811808;6,5;2,7;0,4;1,6;0,1;0,8;0,9;2,5;2,1;1,6;0,1;1,6;1,2;0,5;Modern Age
+204485;Riyad Mahrez;Algeria;Man City;94,791;2020-21;Premier League;0,46035806;0,30690537;0,76726343;2,1;1,6;1,8;1,6;0,4;0,8;1,7;0,3;0,5;0,7;0;0,6;0,6;0,1;Modern Age
+210514;João Cancelo;Portugal;Man City;73,113;2020-21;Premier League;0,08688097;0,1303215;0,2172024;1,3;1,6;1,1;1;0,2;1,4;1,1;1,9;0,8;1,6;0;0,6;1;0,1;Modern Age
+186942;Ilkay Gündogan;Germany;Man City;90,414;2020-21;Premier League;0,64007878;0,09847366;0,73855244;1,7;1,2;1,2;2,1;0,1;1;1,6;2,3;1,2;3;0;1;1;0,3;Modern Age
+202652;Raheem Sterling;England;Man City;92,77;2020-21;Premier League;0,39416634;0,27591644;0,67008278;2,3;1,3;0,6;1,1;0;0,3;0,5;1,5;0,5;1;0;0,3;1,2;0,2;Modern Age
+231866;Rodri;Spain;Man City;55,959;2020-21;Premier League;0,07275373;0,07275373;0,14550746;1,4;0,9;0,8;2;0,4;1;2,4;0,7;0,4;1,2;0,1;1,5;0,5;0,1;Modern Age
+230666;Gabriel Jesus;Brazil;Man City;89,393;2020-21;Premier League;0,4368932;0,19417476;0,63106796;0,9;1;0,7;0,5;0,2;0,3;0,8;2,2;1,4;1,1;0,2;1,7;0,9;0,1;Modern Age
+218667;Bernardo Silva;Portugal;Man City;81,56;2020-21;Premier League;0,0965717;0,28971511;0,38628682;1,3;1,7;0,7;0,9;0,4;0,6;0,9;1;0,3;0,4;0;0,3;0,8;0;Golden Age
+182521;Toni Kroos;Germany;Real Madrid;95,116;2020-21;Laliga;0,14137606;0,47125353;0,6126296;1,2;2,4;3,3;2,6;0,1;1,1;1,8;2,4;1,1;1,6;0,2;1,4;0,7;0,1;Golden Age
+165153;Karim Benzema;France;Real Madrid;98,453;2020-21;Laliga;0,792556857;0,310130944;1,102687802;3,6;1,1;2,2;1,1;0,1;1,7;2;0,9;0,6;1;0;0,3;0,6;0;Golden Age
+200145;Casemiro;Brazil;Real Madrid;63,237;2020-21;Laliga;0,206682742;0,137788495;0,344471237;1,4;0,7;0,4;1,3;1;0,8;1,9;0,3;0,2;0,7;0;0,4;0,3;0;Golden Age
+176580;Luis Suárez;Uruguay;Atletico;96,172;2020-21;Laliga;0,833002777;0,119000397;0,952003173;3,3;0,8;1,6;0,9;0;0,9;1,2;1,1;1,4;0,9;0;0,3;0,7;0,1;Golden Age
+177003;Luka Modric;Croatia;Real Madrid;77,395;2020-21;Laliga;0,182215743;0,109329446;0,29154519;1,3;1,4;1,6;1,2;0,1;0,7;0,9;1,2;1;0,7;0;0,7;0,5;0,1;Golden Age
+228702;Frenkie de Jong;Netherlands;Barcelona;69,749;2020-21;Laliga;0,094966762;0,126622349;0,22158911;0,5;1,3;2,6;2,8;0,4;2,5;2,4;1,4;0,2;2,4;0;0;1,1;0,1;Golden Age
+158023;Lionel Messi;Argentina;Barcelona;99,487;2009-10;Laliga;1,196761704;0,351988736;1,54875044;4,7;1,9;1;1,7;0;0,6;0,6;1,8;1,3;0,9;0;0,5;1,3;0,2;Golden Age
+20801;Cristiano Ronaldo;Portugal;Real Madrid;99,558;2009-10;Laliga;1,044176707;0,281124498;1,325301205;7,3;2,6;0,8;1,2;0;0,4;0,9;1,3;0,7;0,8;0;1,3;1;0,3;Golden Age
+10535;Xavi;Spain;Barcelona;93,697;2009-10;Laliga;0,106951872;0,463458111;0,570409982;1,3;3,2;0,7;1,2;0,5;1,3;1,4;0,9;0,5;0,7;0;0,4;0,6;0,2;Golden Age
+Xabi Alonso;Xabi Alonso;Spain;Real Madrid;63,673;2009-10;Laliga;0,099667774;0,166112957;0,265780731;1,2;1,9;1,1;1;0,6;0,8;1,6;0,3;0,1;0,8;0,1;0,2;0,1;0;Golden Age
+158023;Lionel Messi;Argentina;Barcelona;99,725;2010-11;Laliga;1,084295208;0,629590766;1,713885974;4,5;2;0,9;0,7;0,1;0,3;0,8;0,8;1,2;0,6;0,2;2,9;0,4;0,5;Golden Age
+20801;Cristiano Ronaldo;Portugal;Real Madrid;99,636;2010-11;Laliga;1,373154823;0,377617576;1,7507724;7,4;2;0,4;0,5;0;0,3;0,8;1,7;1,3;1,3;0,1;2;0,6;0,4;Golden Age
+165153;Karim Benzema;France;Real Madrid;99,559;2021-22;Laliga;1,038461538;0,461538462;1,5;4;1,9;0,5;0,4;0,3;0,4;0,9;1,3;1,4;0,6;0,1;0,9;0,8;0,1;Golden Age
+192985;Kevin De Bruyne;Belgium;Man City;98,674;2021-22;Premier League;0,680272109;0,362811791;1,0430839;2,6;2,9;0,7;2,1;0,1;1;1,6;2,7;1,8;1,7;0,5;2,5;1;0,2;Golden Age
+209331;Mohamed Salah;Egypt;Liverpool;99,795;2021-22;Premier League;0,83242852;0,470503076;1,302931596;4;1,8;2,4;1,7;0,4;1,3;3,1;1;0,6;0,9;0;0,2;0,6;0;Golden Age
+231281;Trent Alexander-Arnold;England;Liverpool;87,787;2021-22;Premier League;0,070077085;0,420462509;0,490539594;1,6;2,8;1;0,7;0,1;0,8;1,4;0,5;0,4;0,5;0;0,2;0,6;0;Golden Age
+200104;Son Heung-Min;Korea Republic;Tottenham;97,571;2021-22;Premier League;0,761337306;0,231711354;0,993048659;2,5;2,1;1;1,3;0;0,6;0,7;2,8;1,9;1,7;0;1,5;1,3;0,4;Golden Age
+202126;Harry Kane;England;Tottenham;95,908;2021-22;Premier League;0,525990099;0,278465347;0,804455446;3,6;1,4;1;2,5;0,4;1,7;3,8;0,6;0,2;1,8;0;0,8;0,4;0;Golden Age
+237692;Phil Foden;England;Man City;90,445;2021-22;Premier League;0,421940928;0,234411627;0,656352555;2;1,4;1,4;0,8;0,3;1,5;2;1;0,6;1;0;0,3;0,8;0;Golden Age
