@@ -9,19 +9,18 @@ df["NomeCartinha"] = df["Player"] + " " + df["Season"] + ".png"
 df = df.drop(columns=["ID", "Nacionalidade"])
 
 # Inicializa o app
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=['/assets/style.css'], meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1.0"}])
 server = app.server
 
-# Layout
 app.layout = html.Div([ 
     html.Div(html.H1("Extreme Stats Football", style={
-            "textAlign": "center",
-            "color": "white",
-            "fontSize": "32px",
-            "marginTop": "20px",
-            "fontWeight": "bold",
-            "textShadow": "2px 2px 4px rgba(0, 0, 0, 0.7)"
-        }),style={ 
+        "textAlign": "center",
+        "color": "white",
+        "fontSize": "32px",
+        "marginTop": "20px",
+        "fontWeight": "bold",
+        "textShadow": "2px 2px 4px rgba(0, 0, 0, 0.7)"
+    }), style={ 
         "position": "fixed", 
         "top": "0", 
         "left": "0", 
@@ -53,15 +52,30 @@ app.layout = html.Div([
                 type="text", 
                 placeholder="Buscar jogador", 
                 debounce=True, 
-                style={"width": "250px", "padding": "6px", "height": "38px", "right": "85px"} 
-            ), 
+                style={"width": "170px", "padding": "6px", "height": "38px", "right": "85px"} 
+            ),
+            dcc.Input( 
+                id="filtro-time", 
+                type="text", 
+                placeholder="Buscar time", 
+                debounce=True, 
+                style={"width": "170px", "padding": "6px", "height": "38px", "right": "85px"} 
+            ),
             dcc.Dropdown( 
                 id="filtro-temporada", 
-                options=[{"label": t, "value": t} for t in sorted(df["Season"].unique())], 
                 placeholder="Escolha a temporada", 
                 multi=True, 
                 style={"width": "200px", "minHeight": "38px"} 
+            ),  
+            dcc.Dropdown( 
+                id="filtro-era", 
+                options=[{"label": a, "value": a} for a in sorted(df["Age"].unique())], 
+                value=sorted(df["Age"].unique()), 
+                placeholder="Escolha a Era", 
+                multi=True, 
+                style={"width": "180px", "minHeight": "38px"} 
             ), 
+           
             dcc.Dropdown( 
                 id="filtro-liga", 
                 options=[{"label": l, "value": l} for l in sorted(df["League"].unique())], 
@@ -76,8 +90,8 @@ app.layout = html.Div([
             "marginTop": "260px", 
             "marginBottom": "20px", 
             "justifyContent": "center", 
-            "marginLeft": "-195px" 
-        }), 
+            "marginLeft": "-105px" 
+        }, className="filtro-container"), 
 
         html.Div([ 
             dash_table.DataTable( 
@@ -104,23 +118,39 @@ app.layout = html.Div([
     ]) 
 ], style={"position": "relative", "height": "105vh", "overflow": "hidden"}) 
 
+# Atualiza opções do filtro de temporada com base na era selecionada
+@app.callback(
+    Output("filtro-temporada", "options"),
+    Input("filtro-era", "value")
+)
+def atualizar_temporadas_com_base_na_era(era_selecionada):
+    df_filtrado = df[df["Age"].isin(era_selecionada)]
+    temporadas = sorted(df_filtrado["Season"].unique())
+    return [{"label": t, "value": t} for t in temporadas]
+
 # Atualiza tabela com base nos filtros e rank dinâmico
 @app.callback( 
     Output("tabela-jogadores", "data"), 
     Input("filtro-temporada", "value"), 
     Input("filtro-liga", "value"), 
     Input("filtro-jogador", "value"), 
+    Input("filtro-time", "value"),
+    Input("filtro-era", "value"), 
     Input("tabela-jogadores", "sort_by") 
 ) 
-def atualizar_tabela(temporadas, ligas, nome_jogador, sort_by): 
+def atualizar_tabela(temporadas, ligas, nome_jogador, nome_time, eras, sort_by): 
     df_filtrado = df.copy() 
 
+    if eras: 
+        df_filtrado = df_filtrado[df_filtrado["Age"].isin(eras)]
     if temporadas: 
         df_filtrado = df_filtrado[df_filtrado["Season"].isin(temporadas)] 
     if ligas: 
         df_filtrado = df_filtrado[df_filtrado["League"].isin(ligas)] 
     if nome_jogador: 
         df_filtrado = df_filtrado[df_filtrado["Player"].str.lower().str.contains(nome_jogador.lower())] 
+    if nome_time: 
+        df_filtrado = df_filtrado[df_filtrado["Team"].str.lower().str.contains(nome_time.lower())] 
 
     # Rank dinâmico
     if sort_by and len(sort_by) > 0: 
@@ -135,7 +165,7 @@ def atualizar_tabela(temporadas, ligas, nome_jogador, sort_by):
         df_filtrado = df_filtrado.sort_values("P", ascending=False).reset_index(drop=True) 
         df_filtrado["Rank"] = df_filtrado["P"].rank(method="min", ascending=False).astype(int)
 
-    return df_filtrado.to_dict("records") 
+    return df_filtrado.to_dict("records")
 
 # Atualiza a cartinha exibida com base na seleção
 @app.callback( 
